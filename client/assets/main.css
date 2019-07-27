@@ -109,6 +109,8 @@ div.searchMessage p {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 @media (max-width: 768px) {
@@ -182,7 +184,7 @@ div.searchMessage p {
 }
 
 .translate {
-  position: absolute;
+  position: fixed;
   right: 1em;
   top: 1em;
   z-index: 3;

@@ -90,6 +90,8 @@ div.searchMessage {
 .container {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
+
     @include media("<=tablet") {
         align-content: stretch;
         display: flex;
@@ -149,7 +151,7 @@ div.searchMessage {
 }
 
 .translate{
-    position: absolute;
+    position: fixed;
     right: 1em;
     top: 1em;
     z-index: 3;

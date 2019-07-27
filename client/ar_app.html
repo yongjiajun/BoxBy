@@ -10,12 +10,19 @@
     <a-scene embedded arjs>
             <a-assets>
                     <a-asset id="cesium-man" src="assets/ar_models/CesiumMan.glb"></a-asset>
+                    <a-asset id="duck" src="assets/ar_models/Duck.glb"></a-asset>
                 </a-assets>
-        <a-marker preset="hiro">
-                <a-entity id="walker" gltf-model="#cesium-man" position="0 0 -5" scale="0.5 0.5 0.5" animation-mixer>
-                    </a-entity>        </a-marker>
-        <a-entity camera></a-entity>
+                <a-entity id="walker1" gltf-model="#duck" position="0 1 -4" scale="0.5 0.5 0.5" animation-mixer> </a-entity>        
+                <a-entity id="walker2" gltf-model="#duck" position="0 0.5 -6" scale="1 0.5 0.5" animation-mixer> </a-entity>        
+                <a-entity id="walker3" gltf-model="#cesium-man" position="3 0 -7" scale="0.5 0.5 0.5" animation-mixer> </a-entity>        
+                <a-entity id="walker4" gltf-model="#duck" position="0 2 -6" scale="0.5 0.5 0.5" animation-mixer> </a-entity>        
+                <a-entity id="walker5" gltf-model="#cesium-man" position="4 2 -7" scale="0.5 0.5 0.5" animation-mixer> </a-entity>        
+                <a-entity id="walker6" gltf-model="#duck" position="2 1 -3" scale="0.5 0.5 0.5" animation-mixer> </a-entity>        
+        <a-camera ar-raycaster raycaster cursor="fuse:false"></a-camera>
   
+	<a-ring id="cursor" radius-inner="0.1" radius_outer="0.2" color="teal" position="0 -0.8 -5" rotation="-90 0 0">
+	</a-ring>
+
  
     </a-scene>
 </body>
