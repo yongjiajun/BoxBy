@@ -13,12 +13,133 @@ $(function() {
   $.ajaxSetup({
     async: false
   });
+
   const definition = document.querySelector('.definition')
   const search = document.querySelector('.search');
   search.addEventListener('keydown', () => filterResult(search.value), false);
   search.addEventListener('keyup', () => filterResult(search.value), false);
   search.addEventListener('keypress', () => filterResult(search.value), false);
   const defaultText = definition.innerText;
+  const question = document.querySelectorAll('.question');
+  const yesAns = document.querySelectorAll("[choice='yes']");
+  const noAns = document.querySelectorAll("[choice='no']")
+  const menuView = document.querySelector('.menu-view');
+  const translator = document.querySelector('.translate');
+  const notify = document.querySelector('.notify');
+  let currentCheck = 1;
+
+  function loadChecking() {
+    var allChild = document.querySelectorAll('section');
+    [...allChild].forEach(child => {
+        console.log(child.getAttribute('screen-id'));
+        if(child.getAttribute('screen-id') == currentCheck) {
+            child.style.display = 'flex';
+        } else {
+            console.log('hidding ');
+            child.style.display = 'none';
+        }
+    })
+  }
+
+  translator.addEventListener('click', () => {
+        if(search.placeholder === 'Type to search') {
+            search.placeholder = "Gõ để tìm kiếm";
+        } else {
+            search.placeholder = "Type to search";
+        }
+        [...question].forEach(q => {
+            if(q.getAttribute('context') == 'Would you like visual assistance?' && q.innerHTML == q.getAttribute('context')) {
+                q.innerHTML = "Bạn có cần hỗ trợ thị lực không?";
+                [...yesAns].forEach(y => {
+                    if(y.getAttribute('context') == 'Would you like visual assistance?') {
+                        y.innerHTML = 'Có'
+                    }
+                });
+                [...noAns].forEach(y => {
+                    if(y.getAttribute('context') == 'Would you like visual assistance?') {
+                        y.innerHTML = 'Không'
+                    }
+                })
+            } else if(q.getAttribute('context') == 'Would you like visual assistance?' && q.innerHTML !== q.getAttribute('context')) {
+                q.innerHTML = "Would you like visual assistance?";
+                [...yesAns].forEach(y => {
+                    if(y.getAttribute('context') == 'Would you like visual assistance?') {
+                        y.innerHTML = 'Yes'
+                    }
+                });
+                [...noAns].forEach(y => {
+                    if(y.getAttribute('context') == 'Would you like visual assistance?') {
+                        y.innerHTML = 'No'
+                    }
+                });
+            }
+            if(q.getAttribute('context') == 'Do you require screen reader?' && q.innerHTML == q.getAttribute('context')) {
+                q.innerHTML = "Bạn có cần hỗ trợ đọc không?";
+                [...yesAns].forEach(y => {
+                    if(y.getAttribute('context') == 'Do you require screen reader?') {
+                        y.innerHTML = 'Có'
+                    }
+                });
+                [...noAns].forEach(y => {
+                    if(y.getAttribute('context') == 'Do you require screen reader?') {
+                        y.innerHTML = 'Không'
+                    }
+                })
+            } else if(q.getAttribute('context') == 'Do you require screen reader?' && q.innerHTML !== q.getAttribute('context')) {
+                q.innerHTML = 'Do you require screen reader?';
+                [...yesAns].forEach(y => {
+                    if(y.getAttribute('context') == 'Do you require screen reader?') {
+                        y.innerHTML = 'Yes'
+                    }
+                });
+                [...noAns].forEach(y => {
+                    if(y.getAttribute('context') == 'Do you require screen reader?') {
+                        y.innerHTML = 'No'
+                    }
+                })
+            }
+        });
+  }, false);
+  loadChecking();
+  console.log(yesAns);
+  [...yesAns].forEach(option => {
+    option.addEventListener('click', () => {
+        currentCheck++;
+        if(option.getAttribute('data-option') == 'visualAssist') {
+            const translatorImg = document.querySelector('.translate img');
+            document.body.style.background = '#000';
+            translatorImg.src = '/assets/translate-rv.png';
+            notify.innerHTML = 'Activated visual assistance.';
+            anime({
+                targets: '.notify',
+                keyframes: [
+                    {opacity: 1},
+                    {opacity: 0},
+                  ],
+                duration: 4000,
+            });
+        }
+        if(option.getAttribute('data-option') == 'screenReader') {
+            // Do something
+            notify.innerHTML = 'Activated screen reader mode.';
+            anime({
+                targets: '.notify',
+                keyframes: [
+                    {opacity: 1},
+                    {opacity: 0},
+                  ],
+                duration: 4000,
+            });
+        }
+        loadChecking();
+      }, false);
+  });
+  [...noAns].forEach(option => {
+    option.addEventListener('click', () => {
+        currentCheck++;
+        loadChecking();
+    }, false);
+  })
 
   function filterResult(query) {
     const itemList = document.querySelectorAll('.atvImg');
