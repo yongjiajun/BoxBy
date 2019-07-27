@@ -13,31 +13,57 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="theme-color" content="#ffffff">
     <link rel="stylesheet" media="screen" href="assets/main.css"/>
+    <link rel="stylesheet" media="screen" href="assets/animate.css"/>
+
 </head>
 <body>
+    <div class="notify">
+
+    </div>
+    <section screen-id='1'>
+        <div>
+            <p class="question" context='Do you require screen reader?'>Do you require screen reader?</p>
+            <div class="option-panel">
+                <a href="#" data-option='screenReader' context='Do you require screen reader?' class="option" choice='yes'>Yes</a>
+                <a href="#" data-option='screenReader' context='Do you require screen reader?' class="option" choice='no'>No</a>
+            </div>
+        </div>
+    </section>
+    <section screen-id='2'>
+        <div>
+            <p class="question" context='Would you like visual assistance?'>Would you like visual assistance?</p>
+            <div class="option-panel">
+                <a href="#" data-option='visualAssist' context='Would you like visual assistance?' class="option" choice='yes'>Yes</a>
+                <a href="#" data-option='visualAssist' context='Would you like visual assistance?' class="option" choice='no'>No</a>
+            </div>
+        </div>
+    </section>
+    <div class="translate">
+        <img src="assets/translate.svg"/>
+    </div>
     <center><img src="assets/EduBox.png" class="logo"></center>
     <input type="text" class="search" placeholder="Type to search">
     <div class="searchMessage"><img src="./assets/notfound.svg"><p>Sorry we can't find what you're looking for :(</p></div>
     <div class="container">
-        <div class='atvImg' name="khanacademy" data-link="/khan_academy">
+        <div class='atvImg' name="khanacademy" data-link="http://khancache.com/">
                 <img src='./assets/logos/khanacademy.png'>
                 <div class='atvImg-layer' data-img='./assets/logos/khanacademy.png'></div>
                 <div class='atvImg-layer' data-img='./assets/logos/khanacademy.png'></div>
         </div>
 
-        <div class='atvImg' name="wikipedia" data-link='/wiki'>
+        <div class='atvImg' name="wikipedia" data-link='http://wikicache.com'>
                 <img src='./assets/logos/wikipedia.png'>
                 <div class='atvImg-layer' data-img='./assets/logos/wikipedia.png'></div>
                 <div class='atvImg-layer' data-img='./assets/logos/wikipedia.png'></div>
         </div>
 
-        <div class='atvImg' name="npm" data-link='/npm'>
-                <img src='./assets/logos/npm.jpg'>
-                <div class='atvImg-layer' data-img='./assets/logos/npm.jpg'></div>
-                <div class='atvImg-layer' data-img='./assets/logos/npm.jpg'></div>
+        <div class='atvImg' name="npm" data-link='http://canvascache.com'>
+                <img src='./assets/logos/canvas.png'>
+                <div class='atvImg-layer' data-img='./assets/logos/canvas.png'></div>
+                <div class='atvImg-layer' data-img='./assets/logos/canvas.png'></div>
         </div>
 
-        <div class='atvImg' name="vr" data-link='/vr'>
+        <div class='atvImg' name="vr" data-link='http://vrcache.com'>
                 <img src='./assets/logos/vr.png'>
                 <div class='atvImg-layer' data-img='./assets/logos/vr.png'></div>
                 <div class='atvImg-layer' data-img='./assets/logos/vr.png'></div>
@@ -48,5 +74,6 @@
     </div>
     <script src="assets/jquery-3.4.1.min.js"></script>
     <script src="assets/main.js"></script>
+    <script src="assets/anime.min.js"></script>
 </body>
 </html>

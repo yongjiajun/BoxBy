@@ -178,6 +178,86 @@ div.searchMessage p {
 
 .logo {
   margin-top: 2em;
-  width: 30vw;
+  width: 20vw;
+}
+
+.translate {
+  position: absolute;
+  right: 1em;
+  top: 1em;
+  z-index: 3;
+  padding: 1em;
+  border-radius: 100%;
+}
+
+.translate img {
+  width: 50px;
+  height: 50px;
+}
+
+.translate:hover {
+  cursor: pointer;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+section {
+  width: 100%;
+  height: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background: -webkit-gradient(linear, left top, left bottom, from(#f6f7fc), color-stop(40%, #d5e1e8)) fixed;
+  background: linear-gradient(#f6f7fc 0%, #d5e1e8 40%) fixed;
+  display: none;
+}
+
+section .question {
+  font-size: 4em;
+}
+
+section .option-panel {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+section .option {
+  font-size: 2.5em;
+  color: black;
+  text-decoration: none;
+}
+
+section .option:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.notify {
+  background: #d4edda;
+  border: 2px solid #c3e6cb;
+  color: #155724;
+  border-radius: 20px;
+  padding: 2em;
+  position: fixed;
+  bottom: 1em;
+  right: 1em;
+  z-index: 999;
+  font-family: 'Arial', Helvetica, sans-serif;
+  opacity: 0;
 }
 /*# sourceMappingURL=main.css.map */
