@@ -1,0 +1,187 @@
+body, html {
+  height: 100%;
+  min-height: 100%;
+}
+
+body {
+  background: -webkit-gradient(linear, left top, left bottom, from(#f6f7fc), color-stop(40%, #d5e1e8));
+  background: linear-gradient(to bottom, #f6f7fc 0%, #d5e1e8 40%);
+}
+
+.search {
+  border-radius: 999999px;
+  border: none;
+  -webkit-box-shadow: 0 0 20px #e6e6e6;
+          box-shadow: 0 0 20px #e6e6e6;
+  width: 100%;
+  padding: 1em 3em;
+  font-size: 1.5em;
+  color: grey;
+  width: 300px;
+  margin: 1em auto;
+  position: relative;
+  display: block;
+}
+
+.search:focus {
+  outline: none;
+}
+
+.definition {
+  font-family: arial,sans-serif;
+  font-size: 1.1em;
+  color: gray;
+  display: none;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.definition .found {
+  color: black;
+}
+
+div.searchMessage {
+  font-family: 'Courier New', Courier, monospace;
+  color: black;
+  display: none;
+  margin: 0 auto;
+}
+
+div.searchMessage img {
+  width: 500px;
+  margin: 10em auto 0 auto;
+  display: block;
+}
+
+div.searchMessage p {
+  text-align: center;
+}
+
+.atvImg {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 280px;
+  height: 158px;
+  margin: 1em;
+  border-radius: 5px;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  cursor: pointer;
+}
+
+.atvImg.depressed {
+  margin-top: 25px;
+  -webkit-box-shadow: 0 5px 30px rgba(0, 0, 0, 0.4);
+          box-shadow: 0 5px 30px rgba(0, 0, 0, 0.4);
+}
+
+.atvImg img {
+  border-radius: 5px;
+  -webkit-box-shadow: 0 2px 8px rgba(14, 21, 47, 0.25);
+          box-shadow: 0 2px 8px rgba(14, 21, 47, 0.25);
+}
+
+@media (max-width: 768px) {
+  .atvImg {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    width: 90%;
+    height: 200px;
+  }
+}
+
+.atvImg img {
+  height: 200px;
+}
+
+.atvImg-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .container {
+    -ms-flex-line-pack: stretch;
+        align-content: stretch;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.atvImg-container.over .atvImg-shadow {
+  -webkit-box-shadow: 0 45px 100px rgba(14, 21, 47, 0.4), 0 16px 40px rgba(14, 21, 47, 0.4);
+          box-shadow: 0 45px 100px rgba(14, 21, 47, 0.4), 0 16px 40px rgba(14, 21, 47, 0.4);
+}
+
+.atvImg-layers {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  overflow: hidden;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+
+.atvImg-rendered-layer {
+  position: absolute;
+  width: 104%;
+  height: 104%;
+  top: -2%;
+  left: -2%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: white;
+  background-size: auto 140px;
+  -webkit-transition: all 0.1s ease-out;
+  transition: all 0.1s ease-out;
+}
+
+.atvImg-shadow {
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  width: 90%;
+  height: 90%;
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+  -webkit-box-shadow: 0 8px 30px rgba(14, 21, 47, 0.6);
+          box-shadow: 0 8px 30px rgba(14, 21, 47, 0.6);
+}
+
+.atvImg-shine {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 5px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0) 40%);
+}
+
+.logo {
+  margin-top: 2em;
+  width: 320px;
+}
+/*# sourceMappingURL=main.css.map */

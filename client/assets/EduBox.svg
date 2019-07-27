@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1041" height="399.815" viewBox="0 0 1041 399.815">
+  <defs>
+    <filter id="EduBox" x="433" y="23" width="608" height="317" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Group_1" data-name="Group 1" transform="translate(-272 -611)">
+    <g id="F0yG3x.tif" transform="translate(-35.4 570.505)">
+      <path id="Path_14" data-name="Path 14" d="M307.4,255.265l94.18,60.007,94.18-60.007L401.58,195.2Z" transform="translate(0 -64.488)" fill="#b4d0e7"/>
+      <path id="Path_15" data-name="Path 15" d="M498.4,580.265l94.18,60.007,94.18-60.007L592.58,520.2Z" transform="translate(-79.617 -199.962)" fill="#b4d0e7"/>
+      <path id="Path_16" data-name="Path 16" d="M684.4,255.265l94.18,60.007,94.18-60.007L778.58,195.2Z" transform="translate(-157.15 -64.488)" fill="#b4d0e7"/>
+      <path id="Path_17" data-name="Path 17" d="M483.4,133.265l94.18,60.007,94.18-60.007L577.58,73.2Z" transform="translate(-73.364 -13.633)" fill="#b4d0e7"/>
+      <path id="Path_18" data-name="Path 18" d="M307.4,457.265l94.18,60.007,94.18-60.007L401.58,397.2Z" transform="translate(0 -148.69)" fill="#b4d0e7"/>
+      <path id="Path_19" data-name="Path 19" d="M686.4,460.265l94.18,60.007,94.18-60.007L780.58,400.2Z" transform="translate(-157.984 -149.941)" fill="#b4d0e7"/>
+      <path id="Path_20" data-name="Path 20" d="M525.487,113l58.519,37.39a19.135,19.135,0,0,0,20.566.026l58.615-37.241a19.137,19.137,0,0,0,.041-32.278l-58.519-37.39a19.135,19.135,0,0,0-20.566-.026L525.528,80.721A19.137,19.137,0,0,0,525.487,113Z" transform="translate(-87.226)" fill="#3f76ff"/>
+      <path id="Path_21" data-name="Path 21" d="M723.487,229l58.519,37.39a19.135,19.135,0,0,0,20.566.026l58.615-37.241a19.137,19.137,0,0,0,.041-32.278l-58.519-37.39a19.135,19.135,0,0,0-20.566-.026l-58.615,37.241A19.137,19.137,0,0,0,723.487,229Z" transform="translate(-169.761 -48.354)" fill="#3f76ff"/>
+      <path id="Path_22" data-name="Path 22" d="M723.487,456l58.519,37.39a19.135,19.135,0,0,0,20.566.026l58.615-37.241a19.137,19.137,0,0,0,.041-32.278l-58.519-37.39a19.135,19.135,0,0,0-20.566-.026l-58.615,37.241A19.137,19.137,0,0,0,723.487,456Z" transform="translate(-169.761 -142.977)" fill="#3f76ff"/>
+      <path id="Path_23" data-name="Path 23" d="M535.507,566.086,594.074,603.4a19.137,19.137,0,0,0,20.566,0l58.567-37.316a19.136,19.136,0,0,0,0-32.278L614.64,496.493a19.137,19.137,0,0,0-20.566,0l-58.567,37.316A19.136,19.136,0,0,0,535.507,566.086Z" transform="translate(-91.394 -188.83)" fill="#3f76ff"/>
+      <path id="Path_24" data-name="Path 24" d="M535.487,341l58.519,37.39a19.135,19.135,0,0,0,20.566.026l58.615-37.241a19.137,19.137,0,0,0,.041-32.278l-58.519-37.39a19.135,19.135,0,0,0-20.566-.026l-58.615,37.241A19.137,19.137,0,0,0,535.487,341Z" transform="translate(-91.394 -95.04)" fill="#120fff"/>
+      <path id="Path_25" data-name="Path 25" d="M342.487,229l58.519,37.39a19.135,19.135,0,0,0,20.566.026l58.615-37.241a19.137,19.137,0,0,0,.041-32.278l-58.519-37.39a19.135,19.135,0,0,0-20.566-.026l-58.615,37.241A19.137,19.137,0,0,0,342.487,229Z" transform="translate(-10.944 -48.354)" fill="#3f76ff"/>
+      <path id="Path_26" data-name="Path 26" d="M342.487,438l58.519,37.39a19.135,19.135,0,0,0,20.566.026l58.615-37.241a19.137,19.137,0,0,0,.041-32.278l-58.519-37.39a19.135,19.135,0,0,0-20.566-.026l-58.615,37.241A19.137,19.137,0,0,0,342.487,438Z" transform="translate(-10.944 -135.474)" fill="#3f76ff"/>
+    </g>
+    <g transform="matrix(1, 0, 0, 1, 272, 611)" filter="url(#EduBox)">
+      <text id="EduBox-2" data-name="EduBox" transform="translate(442 251)" fill="#3f55ff" font-size="170" font-family="Pacifico-Regular, Pacifico"><tspan x="0" y="0">EduBox</tspan></text>
+    </g>
+  </g>
+</svg>
