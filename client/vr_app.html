@@ -1,15 +1,154 @@
 <html>
-  <head>
-      <script src="../scripts/aframe.min.js"></script>
-    </head>
-  <body>
-    <a-scene loading-screen="dotsColor: green; backgroundColor: black">
-      <a-box position="-1 0.5 -3" rotation="0 45 0" color="#4CC3D9"></a-box>
-      <a-sphere position="0 1.25 -5" radius="1.25" color="#EF2D5E"></a-sphere>
-      <a-cylinder position="1 0.75 -3" radius="0.5" height="1.5" color="#FFC65D"></a-cylinder>
-      <a-plane position="0 -1 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
-      <a-sky color="#ECECEC"></a-sky>
-    </a-scene>
 
-  </body>
+<head>
+  <script src="../scripts/aframe.min.js"></script>
+  <script src="../scripts/index.js"></script>
+  <!-- let's add the animation and orbit controls components -->
+  <script src="../scripts/aframe-animation-component.min.js"></script>
+  <script src="../scripts/aframe-orbit-controls.min.js"></script>
+</head>
+
+<body>
+  <a-scene loading-screen="dotsColor: green; backgroundColor: black">
+
+    <a-mixin id="rotation"
+      animation="property: rotation; loop: true; from:  0 0 0; to: 0 360 0; dur: 20000; easing: linear;"></a-mixin>
+
+    <a-mixin id="orbit" animation="property: rotation; loop: true; to: 0 360 0; dur: 40000; easing: linear;"></a-mixin>
+
+
+    <a-assets>
+        <img id="sun-texture" src="assets/textures/sun.jpg?1540859304920"
+            crossorigin="anonymous">
+        <img id="mercury-texture" src="assets/textures/mercury.jpg?1540859304920"
+            crossorigin="anonymous">
+        <img id="venus-texture" src="assets/textures/venus.jpg?1541102155907"
+            crossorigin="anonymous">
+        <img id="earth-texture" src="assets/textures/earth.jpg?1541102064615"
+            crossorigin="anonymous">
+        <img id="mars-texture" src="assets/textures/mars.jpg?1541102234577"
+            crossorigin="anonymous">
+        <img id="jupiter-texture" src="assets/textures/jupiter.jpg?1541101634813"
+            crossorigin="anonymous">
+        <img id="saturn-texture" src="assets/textures/saturn.jpg?1541102148468"
+            crossorigin="anonymous">
+        <img id="uranus-texture" src="assets/textures/uranus.jpg?1541102150185"
+            crossorigin="anonymous">
+        <img id="neptune-texture" src="assets/textures/neptune.jpg?1541102137305"
+            crossorigin="anonymous">
+        <img id="pluto-texture" src="assets/textures/pluto.jpg?1541102145905"
+            crossorigin="anonymous">
+        <img id="moon-texture" src="assets/textures/moon.png?1541102132708"
+            crossorigin="anonymous">
+        <a-asset-item id="asteroids" response-type="arraybuffer" src="assets/textures/d558c128-2ed0-4284-a0da-4d18b9163ad6_asteroides.glb"></a-asset-item>
+    </a-assets>
+
+    <!-- Give some basic lighting here. Ambient lighting lights the
+    whole scene and makes sure we can still see our rings. -->
+    <a-entity id="basic-light" light="type: ambient; color: #BBB"></a-entity>
+
+    <!--use our new orbit-controls-->
+    <a-entity camera look-controls orbit-controls="target: 0 1.6 -0.5;  initialPosition: -5 5 20"></a-entity>
+
+    <a-sky color="black"></a-sky>
+    <a-entity star-system="count: 1000; radius: 250; depth: 0"></a-entity>
+
+    <!-- large rings we can use to guide our orbits -->
+    <a-entity geometry="primitive: torus; radius: 3; radiusTubular: 0.01;segmentsTubular: 50" material="color: #FFFFFF;opacity: 0.3"
+        rotation="90 0 0" scale="2 2 0.1"></a-entity>
+    <a-entity geometry="primitive: torus; radius: 4.24; radiusTubular: 0.01;segmentsTubular: 50" material="color: #FFFFFF;opacity: 0.3"
+        rotation="90 0 0" scale="2 2 0.1"></a-entity>
+    <a-entity geometry="primitive: torus; radius: 5.24; radiusTubular: 0.01;segmentsTubular: 50" material="color: #FFFFFF;opacity: 0.3"
+        rotation="90 0 0" scale="2 2 0.1"></a-entity>
+    <a-entity geometry="primitive: torus; radius: 6.25; radiusTubular: 0.01;segmentsTubular: 50" material="color: #FFFFFF;opacity: 0.3"
+        rotation="90 0 0" scale="2 2 0.1"></a-entity>
+    <a-entity geometry="primitive: torus; radius: 12.1; radiusTubular: 0.01;segmentsTubular: 50" material="color: #FFFFFF;opacity: 0.3"
+        rotation="90 0 0" scale="2 2 0.1"></a-entity>
+    <a-entity geometry="primitive: torus; radius: 15.55; radiusTubular: 0.01;segmentsTubular: 50" material="color: #FFFFFF;opacity: 0.3"
+        rotation="90 0 0" scale="2 2 0.1"></a-entity>
+    <a-entity geometry="primitive: torus; radius: 18.05; radiusTubular: 0.01;segmentsTubular: 50" material="color: #FFFFFF;opacity: 0.3"
+        rotation="90 0 0" scale="2 2 0.1"></a-entity>
+    <a-entity geometry="primitive: torus; radius: 20.05; radiusTubular: 0.01;segmentsTubular: 50" material="color: #FFFFFF;opacity: 0.3"
+        rotation="90 0 0" scale="2 2 0.1"></a-entity>
+    <a-entity geometry="primitive: torus; radius: 23.05; radiusTubular: 0.01;segmentsTubular: 50" material="color: #FFFFFF;opacity: 0.3"
+        rotation="90 0 0" scale="2 2 0.1"></a-entity>
+
+
+    <!-- let's make the sun rotate and give off light!-->
+    <a-sphere id="sun" position="0 0 0" radius="4" src="#sun-texture" mixin="rotation" light="type: point"
+        material="shader: flat;"></a-sphere>
+
+    <a-entity id="asteroid-belt" gltf-model="#asteroids" scale="2.1 2.1 2.1" position="0 0 0" mixin="rotation"
+        animation="dur: 60000;"></a-entity>
+
+    <!-- our basic planets, we're going to wrap them so we can apply
+    orbits to them and also give them rotation-->
+    <a-entity id="orbit-mercury" mixin="orbit" animation="dur: 20000;">
+        <a-sphere id="mercury" position="0 0 6" radius=".4" src="#mercury-texture" mixin="orbit"></a-sphere>
+    </a-entity>
+
+    <a-entity id="orbit-venus" mixin="orbit">
+        <a-sphere id="venus" position="0 0 8.5" radius=".4" src="#venus-texture" mixin="rotation"></a-sphere>
+    </a-entity>
+
+    <a-entity id="orbit-mars" mixin="orbit">
+        <a-sphere id="mars" position="0 0 12.5" radius=".4" src="#mars-texture" mixin="rotation"></a-sphere>
+    </a-entity>
+
+    <a-entity id="orbit-jupiter" mixin="orbit" animation="dur: 90000;">
+        <a-sphere id="jupiter" position="0 0 24" radius="2.5" src="#jupiter-texture" mixin="rotation"></a-sphere>
+    </a-entity>
+
+    <a-entity id="orbit-pluto" mixin="orbit" animation="dur: 80000;">
+        <a-sphere id="pluto" position="0 0 46" radius=".4" src="#pluto-texture" mixin="rotation"></a-sphere>
+    </a-entity>
+
+
+    <!--there are two orbits here- the earth itself and the earth around the moon-->
+    <a-entity id="orbit-earth" mixin="orbit" animation="dur: 30000;">
+        <a-entity id="earth-and-moon" position="0 0 10.5">
+            <a-entity id="earth-container">
+                <a-sphere position="0 0 0" radius=".5" id="earth" src="#earth-texture" mixin="rotation"></a-sphere>
+                <a-entity id="moon-container" mixin="orbit">
+                    <a-sphere position="-1 0 0" radius=".10" id="moon" src="#moon-texture"></a-sphere>
+                </a-entity>
+            </a-entity>
+        </a-entity>
+    </a-entity>
+
+    <!--we'll need to wrap these further to get our orbits working-->
+    <a-entity id="orbit-saturn" mixin="orbit">
+        <a-entity id="saturn-container" position="0 0 31">
+            <a-sphere radius="1.8" id="saturn" src="#saturn-texture" mixin="rotation"></a-sphere>
+            <a-entity id="saturn-ring-1" geometry="primitive: torus; radius: 3.2; radiusTubular: 0.1;segmentsTubular: 50"
+                material="color: #57524A;" rotation="90 0 0" scale="1 1 0.1"></a-entity>
+            <a-entity id="saturn-ring-2" geometry="primitive: torus; radius: 2.4; radiusTubular: 0.2;segmentsTubular: 50"
+                material="color: #A29A87;" rotation="90 0 0" scale="1 1 0.1"></a-entity>
+        </a-entity>
+    </a-entity>
+
+    <a-entity id="orbit-uranus" mixin="orbit" animation="dur: 70000;">
+        <a-entity id="uranus-container" position="0 0 36">
+            <a-sphere id="uranus" radius=".75" src="#uranus-texture" mixin="rotation"></a-sphere>
+            <a-entity id="uranus-ring" geometry="primitive: torus; radius: 1.5; radiusTubular: 0.01;segmentsTubular: 50"
+                material="color: #FFFFFF;" rotation="-10 90 0" scale="1 1 0.1"></a-entity>
+        </a-entity>
+    </a-entity>
+
+    <a-entity id="orbit-neptune" mixin="orbit" animation="dur: 35000;">
+        <a-entity id="neptune-container" position="0 0 40">
+            <a-sphere id="neptune" radius="1" src="#neptune-texture" mixin="rotation"></a-sphere>
+            <a-entity id="neptune-ring-1" geometry="primitive: torus; radius: 2; radiusTubular: 0.01;segmentsTubular: 50"
+                material="color: #FFFFFF;opacity: 0.8" rotation="90 0 0" scale="1 1 0.1"></a-entity>
+            <a-entity id="neptune-ring-2" geometry="primitive: torus; radius: 1.7; radiusTubular: 0.05;segmentsTubular: 50"
+                material="color: #FFFFFF;opacity: 0.8" rotation="90 0 0" scale="1 1 0.1"></a-entity>
+            <a-entity id="neptune-ring-3" geometry="primitive: torus; radius: 1.3; radiusTubular: 0.01;segmentsTubular: 50"
+                material="color: #FFFFFF;opacity: 0.8" rotation="90 0 0" scale="1 1 0.1"></a-entity>
+        </a-entity>
+    </a-entity>
+
+</a-scene>
+
+</body>
+
 </html>
