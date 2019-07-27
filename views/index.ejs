@@ -272,6 +272,10 @@
             window.myAreaChart = new Chart(ctx2, config2);
             setInterval(function () {
                 let d = new Date();
+                if(config2.data.datasets[0].data.length >= 20) {
+                    config2.data.datasets[0].data.shift();
+                    config2.data.labels.shift();
+                }
                 config2.data.datasets[0].data.push(randomScalingFactor());
                 config2.data.labels.push(`${d.getHours()}:${d.getMinutes()}:${d.getSeconds()}`);
                 window.myAreaChart.update(config2);
