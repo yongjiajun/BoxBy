@@ -1,2 +1,2 @@
 # EduBox
-for RMIT ITS Hackathon
+for RMIT ITS Hackathon 2019
