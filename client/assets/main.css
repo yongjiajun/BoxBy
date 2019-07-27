@@ -15,9 +15,9 @@ body {
           box-shadow: 0 0 20px #e6e6e6;
   width: 100%;
   padding: 1em 3em;
-  font-size: 1.5em;
+  font-size: 1.2em;
   color: grey;
-  width: 300px;
+  width: 30vw;
   margin: 1em auto;
   position: relative;
   display: block;
@@ -48,7 +48,8 @@ div.searchMessage {
 }
 
 div.searchMessage img {
-  width: 500px;
+  width: 50vw;
+  max-width: 500px;
   margin: 10em auto 0 auto;
   display: block;
 }
@@ -182,6 +183,6 @@ div.searchMessage p {
 
 .logo {
   margin-top: 2em;
-  width: 320px;
+  width: 30vw;
 }
 /*# sourceMappingURL=main.css.map */
