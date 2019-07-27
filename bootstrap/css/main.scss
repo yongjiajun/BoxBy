@@ -1,0 +1,22 @@
+$free: #247BA0;
+$total: #70C1B3;
+
+.free, .total {
+    width: 10px;
+    height: 10px;
+    display: inline-flex;
+    border-radius: 100%;
+    margin-right: .2em;
+}
+
+.free{
+    background: $free;
+}
+
+.total{
+    background: $total;
+}
+
+body{
+    padding: 1em;
+}
