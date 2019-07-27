@@ -180,7 +180,6 @@
         var randomScalingFactor = function() {
 			return Math.round(Math.random() * 20);
 		};
-        var MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 		var config2 = {
 			type: 'line',
 			data: {
@@ -194,6 +193,9 @@
 				}]
 			},
 			options: {
+                animation: {
+                    duration: 1000
+                },
                 maintainAspectRatio: false,
 				responsive: true,
                 legend: {
@@ -216,7 +218,7 @@
 						display: true,
 						scaleLabel: {
 							display: true,
-							labelString: 'Month'
+							labelString: 'CPU usage per second'
 						}
 					}],
 					yAxes: [{
@@ -271,9 +273,9 @@
             setInterval(function () {
                 let d = new Date();
                 config2.data.datasets[0].data.push(randomScalingFactor());
-                config2.data.labels.push(`${d.getHours()}:${d.getMinutes()}`)
+                config2.data.labels.push(`${d.getHours()}:${d.getMinutes()}:${d.getSeconds()}`);
                 window.myAreaChart.update(config2);
-            }, 1000);
+            }, 2000);
 		};
     </script>
 </body>
