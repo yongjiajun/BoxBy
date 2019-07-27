@@ -1,0 +1,31 @@
+{
+  "name": "edubox",
+  "version": "1.0.0",
+  "description": "it's a box",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "./node_modules/.bin/nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yongjiajun/EduBox.git"
+  },
+  "keywords": [
+    "education",
+    "box",
+    "edubox"
+  ],
+  "author": "EduBox",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yongjiajun/EduBox/issues"
+  },
+  "homepage": "https://github.com/yongjiajun/EduBox#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.1"
+  }
+}
