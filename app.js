@@ -42,6 +42,12 @@ app.get('/vr',function(req, res) {
     res.sendFile(__dirname + '/client/vr_app.html');
 });
 
+//route for vr app
+app.get('/ar',function(req, res) {
+    console.log("loading AR resources...");
+    res.sendFile(__dirname + '/client/ar_app.html');
+});
+
 app.get('/dashboard', function(req,res) {
 
     cpuStat.usagePercent(function(err, percent, seconds) {
