@@ -1,0 +1,22 @@
+.free, .total {
+  width: 10px;
+  height: 10px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  border-radius: 100%;
+  margin-right: .2em;
+}
+
+.free {
+  background: #247BA0;
+}
+
+.total {
+  background: #70C1B3;
+}
+
+body {
+  padding: 1em;
+}
+/*# sourceMappingURL=main.css.map */

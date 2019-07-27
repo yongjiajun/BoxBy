@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DashBoard - EduBox</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="../client/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../client/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../client/favicon-16x16.png">
+    <link rel="manifest" href="../client/site.webmanifest">
+    <link rel="mask-icon" href="../client/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" media="screen" href="/css/bootstrap.min.css"/>
+    <link rel="stylesheet" media="screen" href="/css/sb-admin-2.min.css"/>
+    <link rel="stylesheet" media="screen" href="/css/main.css"/>
+    <link rel="stylesheet" media="screen" href="/css/Chart.min.css"/>
+
+</head>
+
+<body>
+  <div class="row">
+
+            <!-- Earnings (Monthly) Card Example -->
+            <div class="col-xl-3 col-md-6 mb-4">
+              <div class="card border-left-primary shadow h-100 py-2">
+                <div class="card-body">
+                  <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                      <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Device ID</div>
+                      <div class="h5 mb-0 font-weight-bold text-gray-800"># <%= deviceId %></div>
+                    </div>
+                    <div class="col-auto">
+                      <i class="fas fa-calendar fa-2x text-gray-300"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Earnings (Monthly) Card Example -->
+            <div class="col-xl-3 col-md-6 mb-4">
+                <% if (connectivity_status === 'Available') { %>
+                    <div class="card border-left-success shadow h-100 py-2">
+                        <div class="card-body">
+                        <div class="row no-gutters align-items-center">
+                            <div class="col mr-2">
+                                <div class="text-xs font-weight-bold text-success text-uppercase mb-1">status</div>
+                                    <div class="h5 mb-0 font-weight-bold text-gray-800"> <%= connectivity_status %></div>
+                <% } else { %>
+                    <div class="card border-left-danger shadow h-100 py-2">
+                        <div class="card-body">
+                        <div class="row no-gutters align-items-center">
+                            <div class="col mr-2">
+                                <div class="text-xs font-weight-bold text-danger text-uppercase mb-1">status</div>
+                    <div class="h5 mb-0 font-weight-bold text-gray-800"> <%= connectivity_status %></div>
+                <% } %>
+                    </div>
+                    <div class="col-auto">
+                      <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Earnings (Monthly) Card Example -->
+            <div class="col-xl-3 col-md-6 mb-4">
+              <div class="card border-left-info shadow h-100 py-2">
+                <div class="card-body">
+                  <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                      <div class="text-xs font-weight-bold text-info text-uppercase mb-1">CPU Usage</div>
+                      <div class="row no-gutters align-items-center">
+                        <div class="col-auto">
+                          <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800"><%= cpu %></div>
+                        </div>
+                        <div class="col">
+                          <div class="progress progress-sm mr-2">
+                            <div class="progress-bar bg-info" role="progressbar" style="width: <%= cpu %>%" aria-valuenow=<%= cpu %> aria-valuemin="0" aria-valuemax="100"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-auto">
+                      <i class="fas fa-clipboard-list fa-2x text-gray-300"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Pending Requests Card Example -->
+            <div class="col-xl-3 col-md-6 mb-4">
+              <div class="card border-left-warning shadow h-100 py-2">
+                <div class="card-body">
+                  <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                      <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">Ping</div>
+                      <div class="h5 mb-0 font-weight-bold text-gray-800"><%= ping %></div>
+                    </div>
+                    <div class="col-auto">
+                      <i class="fas fa-comments fa-2x text-gray-300"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+           <div class="col-xl-12 col-lg-12">
+              <div class="card shadow mb-4">
+                <!-- Card Header - Dropdown -->
+                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                  <h6 class="m-0 font-weight-bold text-primary">Revenue Sources</h6>
+                  <div class="dropdown no-arrow">
+                    <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink">
+                      <div class="dropdown-header">Dropdown Header:</div>
+                      <a class="dropdown-item" href="#">Action</a>
+                      <a class="dropdown-item" href="#">Another action</a>
+                      <div class="dropdown-divider"></div>
+                      <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                  </div>
+                </div>
+                <!-- Card Body -->
+                <div class="card-body">
+                  <div class="chart-pie pt-4 pb-2"><div class="chartjs-size-monitor"><div class="chartjs-size-monitor-expand"><div class=""></div></div><div class="chartjs-size-monitor-shrink"><div class=""></div></div></div>
+                    <canvas id="myPieChart" width="1292" height="490" class="chartjs-render-monitor" style="display: block; height: 500px; width: 646px;"></canvas>
+                  </div>
+                  <div class="mt-4 text-center small">
+                    <span class="mr-2">
+                      <span class="free"></span> Free Storage
+                    </span>
+                    <span class="mr-2">
+                      <span class="total"></span> Total Storage
+                    </span>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+
+    <script src="/js/Chart.min.js"></script>
+    <script>
+      	var config = {
+			type: 'doughnut',
+			data: {
+				datasets: [{
+					data: [<%= disk %>],
+					backgroundColor: [
+						"#247BA0",
+						"#70C1B3",
+					],
+					label: 'Dataset 1',
+				}],
+                labels: [
+					'Free Storage (GB)',
+					'Total Storage (GB)',
+				]
+			},
+			options: {
+                maintainAspectRatio: false,
+				responsive: true,
+				legend: {
+					position: 'top',
+                    display: false
+				},
+				title: {
+					display: false,
+				},
+				animation: {
+					animateScale: true,
+					animateRotate: true,
+                    
+				}
+			}
+		};
+
+		window.onload = function() {
+			var ctx = document.getElementById('myPieChart').getContext('2d');
+			window.myDoughnut = new Chart(ctx, config);
+		};
+    </script>
+</body>
+</html>

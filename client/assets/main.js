@@ -95,6 +95,7 @@ $(function() {
               shineHTML = d.createElement('div'),
               shadowHTML = d.createElement('div'),
               layersHTML = d.createElement('div'),
+              hrefHTML = d.createElement('a')
               layers = [];
   
           thisImg.id = 'atvImg__'+l;
@@ -102,7 +103,9 @@ $(function() {
           shineHTML.className = 'atvImg-shine';
           shadowHTML.className = 'atvImg-shadow';
           layersHTML.className = 'atvImg-layers';
-  
+          hrefHTML.classNAme = 'atvHref';
+          hrefHTML.href = thisImg.getAttribute('data-link');
+
           for(var i=0;i<totalLayerElems;i++){
               var layer = d.createElement('div'),
                   imgSrc = layerElems[i].getAttribute('data-img');
@@ -114,10 +117,10 @@ $(function() {
   
               layers.push(layer);
           }
-  
-          containerHTML.appendChild(shadowHTML);
-          containerHTML.appendChild(layersHTML);
-          containerHTML.appendChild(shineHTML);
+          containerHTML.appendChild(hrefHTML);
+          hrefHTML.appendChild(shadowHTML);
+          hrefHTML.appendChild(layersHTML);
+          hrefHTML.appendChild(shineHTML);
           thisImg.appendChild(containerHTML);
   
           var w = thisImg.clientWidth || thisImg.offsetWidth || thisImg.scrollWidth;
