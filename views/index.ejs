@@ -113,7 +113,7 @@
               <div class="card shadow mb-4">
                 <!-- Card Header - Dropdown -->
                 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                  <h6 class="m-0 font-weight-bold text-primary">Revenue Sources</h6>
+                  <h6 class="m-0 font-weight-bold text-primary">Storage resource</h6>
                   <div class="dropdown no-arrow">
                     <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                       <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
@@ -137,7 +137,7 @@
                       <span class="free"></span> Free Storage
                     </span>
                     <span class="mr-2">
-                      <span class="total"></span> Total Storage
+                      <span class="total"></span> Used Storage
                     </span>
 
                   </div>
@@ -146,8 +146,91 @@
             </div>
         </div>
 
+         <div class="row">
+           <div class="col-xl-12 col-lg-12">
+              <div class="card shadow mb-4">
+                <!-- Card Header - Dropdown -->
+                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                  <h6 class="m-0 font-weight-bold text-primary">Revenue Sources</h6>
+                  <div class="dropdown no-arrow">
+                    <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink">
+                      <div class="dropdown-header">Dropdown Header:</div>
+                      <a class="dropdown-item" href="#">Action</a>
+                      <a class="dropdown-item" href="#">Another action</a>
+                      <div class="dropdown-divider"></div>
+                      <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                  </div>
+                </div>
+                <!-- Card Body -->
+                <div class="card-body">
+                  <div class="chart-area"><div class="chartjs-size-monitor"><div class="chartjs-size-monitor-expand"><div class=""></div></div><div class="chartjs-size-monitor-shrink"><div class=""></div></div></div>
+                    <canvas id="myAreaChart" width="1244" height="640" class="chartjs-render-monitor" style="display: block; height: 320px; width: 622px;"></canvas>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+
     <script src="/js/Chart.min.js"></script>
     <script>
+        var randomScalingFactor = function() {
+			return Math.round(Math.random() * 20);
+		};
+		var config2 = {
+			type: 'line',
+			data: {
+				labels: [],
+				datasets: [{
+					label: 'CPU Usage',
+					backgroundColor: "red",
+					borderColor: "red",
+					data: [], // update
+					fill: false,
+				}]
+			},
+			options: {
+                animation: {
+                    duration: 1000
+                },
+                maintainAspectRatio: false,
+				responsive: true,
+                legend: {
+                    display: false,
+                },
+				title: {
+					display: false,
+					text: 'Chart.js Line Chart'
+				},
+				tooltips: {
+					mode: 'index',
+					intersect: false,
+				},
+				hover: {
+					mode: 'nearest',
+					intersect: true
+				},
+				scales: {
+					xAxes: [{
+						display: true,
+						scaleLabel: {
+							display: true,
+							labelString: 'CPU usage per second'
+						}
+					}],
+					yAxes: [{
+						display: true,
+						scaleLabel: {
+							display: true,
+							labelString: 'Value'
+						}
+					}]
+				}
+			}
+		};
       	var config = {
 			type: 'doughnut',
 			data: {
@@ -184,7 +267,15 @@
 
 		window.onload = function() {
 			var ctx = document.getElementById('myPieChart').getContext('2d');
+            var ctx2 = document.getElementById('myAreaChart').getContext('2d');
 			window.myDoughnut = new Chart(ctx, config);
+            window.myAreaChart = new Chart(ctx2, config2);
+            setInterval(function () {
+                let d = new Date();
+                config2.data.datasets[0].data.push(randomScalingFactor());
+                config2.data.labels.push(`${d.getHours()}:${d.getMinutes()}:${d.getSeconds()}`);
+                window.myAreaChart.update(config2);
+            }, 2000);
 		};
     </script>
 </body>
