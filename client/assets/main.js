@@ -1,8 +1,13 @@
 const filter = {
-    "khanacademy": ["math", "programming", "english", "academy", "khan", "khanacadedmy", "khan academy"],
-    "npm": ["reactjs", "javascript", "html", "c", "npm", "ES6"],
+    "khanacademy": ["math", "programming", "academy", "khan", "khanacadedmy", "khan academy", "family"],
+    "rmit": ["reactjs", "javascript", "html", "c", "npm", "ES6", "rmit", "basketball", "unimelb"],
     "wikipedia": ["vietnam", "china", "melbourne", "wiki", "wikipedia", "wiki pedia"],
-    "vr": ["game", "virtual reality", "virtual", "reality", "vr"]
+    "vr": ["game", "virtual reality", "virtual", "reality", "vr", "space", "nasa"],
+    "harvard": ["harvard", "git"],
+    "ar": ["ar", "vision", "ar core"],
+    "duolingo": ["english", "chinese", "vietnamese", "language", "languages", "duolingo"],
+    "canvas": ["learn", "study", "canvas"],
+
 }
 
 $(function() {

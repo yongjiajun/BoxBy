@@ -96,6 +96,7 @@ div.searchMessage {
         align-content: stretch;
         display: flex;
         flex-direction: column;
+        overflow-y: scroll;
     }
 }
 
