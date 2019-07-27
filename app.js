@@ -31,6 +31,16 @@ app.get('/khan_academy',function(req, res) {
     console.log("loading khan academy...");
     res.sendFile(__dirname + '/client/khan_academy.html');
 });
+
+app.get('/duolingo',function(req, res) {
+    console.log("loading duolingo...");
+    res.sendFile(__dirname + '/client/duolingo.html');
+});
+
+app.get('/canvas',function(req, res) {
+    console.log("loading canvas...");
+    res.sendFile(__dirname + '/client/canvas.html');
+});
 //route for npm repo
 app.get('/npm_repo',function(req, res) {
     console.log("loading npm repo...");
