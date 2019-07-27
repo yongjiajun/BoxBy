@@ -30,6 +30,8 @@ app.get('/vr',function(req, res) {
     res.sendFile(__dirname + '/client/vr_app.html');
 });
 app.use('/client',express.static(__dirname + '/client'));//listens for when the client wants files.
-app.use('/scripts',express.static(__dirname + '/scripts'));//listens for when the client wants files.
+app.use('/assets',express.static(__dirname + '/client/assets'));//listens for when the client wants files.
+
+app.use('/scripts',express.static(__dirname + '/scripts'));//listens for files inside scripts
 
 serv.listen(8000, '0.0.0.0');
