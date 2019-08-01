@@ -21,7 +21,7 @@
 
 ### Features:
 
-- Boxby provides a new way to bring education to previously underrepresented markets.
+- BoxBy provides a new way to bring education to previously underrepresented markets.
 - The platform supports many open-source courses with the ability to host university directed coursework.
 - BoxBy users have the ability to access cached data anytime, anywhere.
 - BoxBy's cache can update automatically once connected to the internet or with portable physical storage.
