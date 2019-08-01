@@ -1,6 +1,6 @@
 ![](https://raw.githubusercontent.com/yongjiajun/BoxBy/master/client/assets/EduBox3.png)
 
-###### a content delivery solution for underserved communities, connecting communities, [...] delivering accessible solutions [...] to anyone anywhere.
+###### a content delivery solution for underserved communities, hence connecting communities, [...] delivering accessible solutions [...] to anyone anywhere.
 
 ![](https://scontent.fmel5-1.fna.fbcdn.net/v/t1.15752-9/67648412_2272470652860973_7866805035865210880_n.jpg?_nc_cat=101&_nc_oc=AQk7Q4zeEapJZWs6uj4_Oz_sLd6zsZoUZtOCSbYAdmeopK72beEPAI2ltuY_8bnMe0I&_nc_ht=scontent.fmel5-1.fna&oh=2daab5c73f94de58c372fdfd7ba24633&oe=5DA1657B)
 
