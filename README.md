@@ -29,6 +29,8 @@
 
 ### BoxBy's Demo:
 
+[![BoxBy Demo Video on Youtube](https://img.youtube.com/vi/YGFYyblr5cY/0.jpg)](https://www.youtube.com/watch?v=YGFYyblr5cY)
+
 https://www.youtube.com/watch?v=YGFYyblr5cY
 
 ### To Run:
