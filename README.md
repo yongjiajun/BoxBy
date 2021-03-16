@@ -2,9 +2,9 @@
 
 ###### a content delivery solution for underserved communities, hence connecting communities, [...] delivering accessible solutions [...] to anyone anywhere.
 
-![](https://scontent.fmel5-1.fna.fbcdn.net/v/t1.15752-9/67648412_2272470652860973_7866805035865210880_n.jpg?_nc_cat=101&_nc_oc=AQk7Q4zeEapJZWs6uj4_Oz_sLd6zsZoUZtOCSbYAdmeopK72beEPAI2ltuY_8bnMe0I&_nc_ht=scontent.fmel5-1.fna&oh=2daab5c73f94de58c372fdfd7ba24633&oe=5DA1657B)
+![](https://media-exp1.licdn.com/dms/image/C5622AQFvoUU14GvAyQ/feedshare-shrink_8192/0/1564363647122?e=1619049600&v=beta&t=jUzm7aNfw1VSDk81Es0HlH-Qd8-FyMet5DW3bH5qxh8)
 
-#### [Came 1st out of 30 teams in RMIT ITS Hack-a-thon Connected Communities 2019, earning a trip to San Francisco valued at AUD$18,000+ and networking opportunities in Silicon Valley with industry leaders.](https://sites.rmit.edu.au/itshackathon/files/2019/07/WIN.jpg) 
+#### [Came 1st out of 30 teams in RMIT ITS Hack-a-thon Connected Communities 2019, earning a trip to San Francisco, USA valued at AUD$18,000+ and networking opportunities in Silicon Valley with industry leaders such as Facebook, Google, Uber, Intel, etc.](https://www.rmit.edu.au/news/all-news/2020/feb/tech-giants-open-doors-to-hackathon-winners) 
 
 ### How do we provide equal opportunity in a world with asymmetric information access?
 
