@@ -26,7 +26,7 @@
     "connectivity": "^1.0.2",
     "cpu-stat": "^2.0.1",
     "diskusage": "^1.1.3",
-    "ejs": "^2.6.2",
+    "ejs": "^3.1.7",
     "express": "^4.17.1"
   },
   "devDependencies": {
